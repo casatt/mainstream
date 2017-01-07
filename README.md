@@ -14,10 +14,10 @@ The credentials vor the twitter API are read via [nconf](https://github.com/inde
 	}
 }
 ```
-## websockets messages ##
+## websocket messages ##
 These commands can be sent from a client to the server
 
 ```json
-    {"track" : KEYWORD} // Will start tracking tweets with this keyord for this user
-    {"untrack" : KEYWORD} // Will stop tracking tweets with this keyord for this user
+    {"track" : "KEYWORD"} // Will **start** tracking tweets that contain this keyword for the client
+    {"untrack" : "KEYWORD"} // Will **stop** tracking tweets that contain this keyword for the client
 ```
