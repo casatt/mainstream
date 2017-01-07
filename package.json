@@ -1,0 +1,25 @@
+{
+  "name": "mainstream",
+  "version": "1.0.0",
+  "description": "Node application to filter specific tweets from twitter and serve them via websocket",
+  "main": "index.js",
+  "author": "Matthieu Holzer",
+  "license": "MIT",
+  "scripts": {
+    "watch": "nodemon",
+    "test": "mocha --reporter spec",
+    "lint": "eslint index.js"
+  },
+  "devDependencies": {
+    "eslint": "^3.13.0",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "nconf": "^0.8.4",
+    "node-tweet-stream": "^2.0.1",
+    "uws": "^0.12.0",
+    "winston": "^2.3.0"
+  }
+}
