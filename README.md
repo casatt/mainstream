@@ -1,23 +1,30 @@
-# mainstream #
+# About mainstream-server #
 
-Very simple node application to filter specific tweets from twitter and serve them via a websocket connection.
+It's a very simple node application to filter specific tweets from twitter, subscribe to them and serve them via a websocket connection.
 
-## configuration ##
-The credentials vor the twitter API are read via [nconf](https://github.com/indexzero/nconf) and can be stored in a *config.json* file with the following properties:
-```json
-{
-	"twitter": {
-		"consumer_key": "YOUR_CONSUMER_KEY",
-		"consumer_secret": "YOUR_CONSUMER_SECRET",
-		"token": "YOUR_TOKEN",
-		"token_secret": "YOUR_TOKEN_SECRET"
-	}
-}
+## Configuration ##
+The credentials vor the twitter API are read from the environment and **must** contain the following properties:
 ```
-## websocket messages ##
+TWITTER_CONSUMER_KEY=***
+TWITTER_CONSUMER_SECRET=***
+TWITTER_TOKEN=***
+TWITTER_TOKEN_SECRET=***
+```
+These are **optional**:
+```
+WEBSOCKET_PORT=3000  #default
+```
+## Websocket messages ##
 These commands can be sent from a client to the server
 
+**Subscribe** to tweets containing _KEYWORD_
+
 ```json
-    {"track" : "KEYWORD"} // Will **start** tracking tweets that contain this keyword for the client
-    {"untrack" : "KEYWORD"} // Will **stop** tracking tweets that contain this keyword for the client
+    {"track" : "KEYWORD"}
+```
+
+**Unsubscribe** to tweets containing _KEYWORD_
+
+```json
+    {"untrack" : "KEYWORD"}
 ```
