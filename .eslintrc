@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "prettier/flowtype"
+  ],
+  "env": {
+    "node": true
+  },
+  "plugins": ["flowtype", "prettier"],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}
