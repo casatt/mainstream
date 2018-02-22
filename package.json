@@ -6,7 +6,7 @@
   "author": "Matthieu Holzer",
   "license": "MIT",
   "scripts": {
-    "build" : "cross-env NODE_ENV=production babel lib -d dist",
+    "build": "cross-env NODE_ENV=production babel lib -d dist",
     "dev": "cross-env NODE_ENV=development nodemon lib/index.js --exec babel-node",
     "lint": "eslint lib",
     "start": "npm run build && node dist/index.js"
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "dotenv": "5.0.0",
-    "node-tweet-stream": "^2.0.3",
+    "twit": "2.2.9",
     "uws": "9.14.0",
     "winston": "^2.4.0"
   }
