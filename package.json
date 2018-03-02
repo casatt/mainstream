@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production babel lib -d dist",
     "dev": "cross-env NODE_ENV=development nodemon lib/index.js --exec babel-node",
     "lint": "eslint lib",
-    "start": "npm run build && node dist/index.js"
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
