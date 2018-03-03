@@ -28,3 +28,19 @@ These commands can be sent from a client to the server
 ```json
     {"untrack" : "KEYWORD"}
 ```
+
+Get the currently globally **trending** topics/hashtags
+
+```json
+  {"trending" : true}
+```
+
+For a **specific location** via latitude/longitude
+```json
+  {
+    "trending" : {
+      "lat": 48.857991,
+      "long" : 2.294861
+    }
+  }
+```
